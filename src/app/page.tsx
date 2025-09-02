@@ -1,103 +1,91 @@
-import Image from "next/image";
+import Image from "/public/logo_3d.png";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#667eea] to-[#764ba2] p-5">
+      <div className="relative bg-white/95 backdrop-blur-2xl rounded-3xl p-10 max-w-lg w-full shadow-2xl border border-white/30">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        {/* Floating circles */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute w-16 h-16 top-1/5 right-10 bg-blue-700/10 rounded-full animate-float delay-2000"></div>
+          <div className="absolute w-10 h-10 bottom-1/3 left-16 bg-blue-700/10 rounded-full animate-float delay-4000"></div>
+          <div className="absolute w-7 h-7 top-3/5 right-1/5 bg-blue-700/10 rounded-full animate-float delay-1000"></div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Header */}
+        <div className="text-center relative">
+          <div className="w-50 h-50 mx-auto mb-6 relative animate-spin-slow">
+            <div className="w-full h-full clip-hex flex items-center justify-center shadow-lg">
+              <img
+                src="/logo_3d.png"
+                alt="Foto de perfil"
+                className="w-40 h-40 mx-auto rounded-full"
+              />
+            </div>
+          </div>
+          <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#4a5cb8] to-[#2d3748] mb-2">
+            Ing. Hengers Rosario
+          </h1>
+          <p className="text-[#4a5cb8] font-medium text-lg">
+            Ingeniero Electrónico | Full Stack Developer
+          </p>
+        </div>
+
+        {/* Description */}
+        <div className="text-left mb-8 text-gray-700 space-y-4 text-sm">
+          <p><strong>+12 años de experiencia</strong> en electrónica y programación, especializado en diseño de hardware y desarrollo de software para sistemas embebidos.</p>
+          <p><strong>+3 años como Full Stack Developer</strong> con experiencia en Front-End y Back-End.</p>
+        </div>
+
+        {/* Skills */}
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-gray-800 mb-4 relative pl-5 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-1 before:h-5 before:rounded before:bg-gradient-to-br from-[#4a5cb8] to-[#2d3748]">
+            Tecnologías
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {["Sistemas Embebidos", "Hardware Design", "Full Stack", "IoT", "Automatización", "Front-End", "Back-End", "Electrónica"].map(skill => (
+              <div key={skill} className="bg-gradient-to-br from-[#4a5cb8] to-[#667eea] text-white text-xs font-medium py-2 px-4 rounded-full text-center shadow hover:translate-y-[-2px] hover:shadow-lg transition-all cursor-pointer">
+                {skill}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Services */}
+        <div className="mb-6">
+          <h3 className="text-xl font-semibold text-gray-800 mb-4 relative pl-5 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-1 before:h-5 before:rounded before:bg-gradient-to-br from-[#4a5cb8] to-[#2d3748]">
+            Servicios Especializados
+          </h3>
+          {[
+            { icon: "⚡", text: "Diseño de circuitos electrónicos y PCB" },
+            { icon: "💻", text: "Desarrollo de software para sistemas embebidos" },
+            { icon: "🌐", text: "Aplicaciones web Full Stack" },
+            { icon: "🏠", text: "Proyectos de domótica y automatización" },
+            { icon: "📡", text: "Soluciones IoT y conectividad" },
+            { icon: "⚙️", text: "Consultoría en sistemas de control" },
+          ].map(service => (
+            <div key={service.text} className="flex items-center p-3 mb-2 bg-blue-700/5 rounded-lg hover:bg-blue-700/10 transition-all">
+              <div className="w-6 h-6 bg-gradient-to-br from-[#4a5cb8] to-[#667eea] rounded-md flex items-center justify-center text-white font-bold mr-3">{service.icon}</div>
+              <div className="text-gray-600 font-medium text-sm">{service.text}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <div className="pt-6 border-t border-blue-700/20 text-center">
+          <p className="text-gray-800 font-medium mb-3">¿Listo para llevar tu proyecto al siguiente nivel?</p>
+          <div className="flex justify-center flex-wrap gap-5">
+            <div className="flex items-center text-[#4a5cb8] font-medium text-sm">
+              <span className="mr-2 text-lg">📧</span>Contáctame por WhatsApp
+            </div>
+            <div className="flex items-center text-[#4a5cb8] font-medium text-sm">
+              <span className="mr-2 text-lg">💼</span>Consulta gratuita
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
+
   );
 }
