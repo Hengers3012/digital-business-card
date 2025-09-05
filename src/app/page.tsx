@@ -31,7 +31,6 @@ export default function Home() {
         ¿Listo para llevar tu proyecto al siguiente nivel?
         <ul className="text-left p-2 list-inside mt-2 space-y-1 text-xs">
           <li className="flex text-left ">
-           
             <img
               src="/contact.svg"
               alt="Logo"
@@ -40,7 +39,6 @@ export default function Home() {
             Contáctame por WhatsApp o Email
           </li>
           <li className="flex text-left align-middle">
-       
             <img
               src="/briefcase.svg"
               alt="Logo"
@@ -53,7 +51,6 @@ export default function Home() {
       <section className="w-80 mb-2 border-1 border-b-gray-800"></section>
       <div className="space-y-2 text-xs">
         <p className="flex items-center justify-center text-center ">
-       
           <img
             src="/whatsapp.svg"
             alt="Logo"
@@ -62,7 +59,6 @@ export default function Home() {
           +1 (829) 208-6017
         </p>
         <p className="flex items-center justify-center text-center ">
-        
           <img
             src="/gmail.svg"
             alt="Logo"
@@ -71,13 +67,14 @@ export default function Home() {
           hengersrosario@gmail.com
         </p>
         {/* <p>🌐 www.hengers.dev</p> */}
-                <p className="flex items-center justify-center text-center ">
-        
+        <p className="flex items-center justify-center text-center ">
           <img
             src="/gps.svg"
             alt="Logo"
             className="w-8 h-8 align-middle mr-0 items-center "
-          />Concepción La Vega, Rep. Dominicana</p>
+          />
+          Concepción La Vega, Rep. Dominicana
+        </p>
       </div>
 
       <div className="mt-6 flex space-x-20">
@@ -164,7 +161,6 @@ export default function Home() {
           </p>
         </div>
       </div>
-
     </div>,
 
     // 3️⃣ Proyección / Portafolio
@@ -208,7 +204,7 @@ export default function Home() {
       {/* Carrusel */}
       <div className="w-full max-w-md overflow-hidden relative rounded-3xl border-2 border-white/50 shadow-2xl">
         <div
-          className="flex transition-transform duration-500"
+          className="flex transition-transform duration-600"
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
           {slides.map((slide, idx) => (
@@ -237,4 +233,3 @@ export default function Home() {
     </div>
   );
 }
-
